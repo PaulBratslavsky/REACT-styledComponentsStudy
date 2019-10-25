@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { GlobalStyle } from './styled/GlobalStyle';
+import { MainView, Button, Paragraph } from './styled';
+import Header from './components/Header';
+
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <Header />
+      
+      <MainView background="black" color="red" backgroundHover="red" colorHover="black">
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sequi architecto aliquid dolor quod molestiae, odit quam iste hic necessitatibus, facilis a similique error laborum corporis maxime illum numquam ut omnis tenetur ex nostrum, quisquam veniam aliquam! Aliquam, alias perferendis.</Paragraph>
+      </MainView>
+
+      <MainView>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sequi architecto aliquid dolor quod molestiae, odit quam iste hic necessitatibus, facilis a similique error laborum corporis maxime illum numquam ut omnis tenetur ex nostrum, quisquam veniam aliquam! Aliquam, alias perferendis.</Paragraph>
+      </MainView>
+
+      <Button>Hello</Button>
     </div>
   );
 }
